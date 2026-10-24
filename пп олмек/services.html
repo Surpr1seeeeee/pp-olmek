@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="uk"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Послуги - ПП ОЛМЕК</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#213145",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "surface-container-high": "#dce9ff",
+                        "on-surface-variant": "#45464d",
+                        "on-secondary-container": "#fffbff",
+                        "outline": "#76777d",
+                        "surface-dim": "#cbdbf5",
+                        "secondary": "#ba0035",
+                        "on-background": "#0b1c30",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#d3e4fe",
+                        "surface-container-low": "#eff4ff",
+                        "secondary-fixed-dim": "#ffb3b6",
+                        "primary-container": "#131b2e",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-secondary-fixed": "#40000c",
+                        "on-secondary-fixed-variant": "#920028",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-surface": "#0b1c30",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "surface": "#f8f9ff",
+                        "tertiary": "#000000",
+                        "background": "#f8f9ff",
+                        "surface-bright": "#f8f9ff",
+                        "surface-tint": "#565e74",
+                        "on-primary-fixed": "#131b2e",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c6c6cd",
+                        "on-tertiary-container": "#818486",
+                        "surface-container": "#e5eeff",
+                        "on-primary-container": "#7c839b",
+                        "inverse-on-surface": "#eaf1ff",
+                        "inverse-primary": "#bec6e0",
+                        "secondary-container": "#e21e49",
+                        "on-tertiary-fixed": "#191c1e",
+                        "primary-fixed": "#dae2fd",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#e0e3e5",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "primary": "#000000",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#191c1e",
+                        "secondary-fixed": "#ffdada"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "mono-label": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "mono-label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: theme('colors.surface'); color: theme('colors.on-surface'); }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-on-background w-full top-0 sticky z-50 border-b border-outline-variant dark:border-outline">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between h-20">
+<a class="font-headline-md text-headline-md font-bold tracking-tighter text-primary dark:text-surface-bright" href="#">
+                ПП ОЛМЕК
+            </a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-secondary dark:text-secondary-fixed font-bold border-b-2 border-secondary h-20 flex items-center font-label-sm text-label-sm uppercase hover:bg-surface-container-low dark:hover:bg-primary-container transition-all px-4" href="#">
+                    Послуги
+                </a>
+<a class="text-on-surface-variant dark:text-tertiary-fixed-dim hover:text-primary transition-colors h-20 flex items-center font-label-sm text-label-sm uppercase hover:bg-surface-container-low dark:hover:bg-primary-container px-4" href="#">
+                    Портфоліо
+                </a>
+<a class="text-on-surface-variant dark:text-tertiary-fixed-dim hover:text-primary transition-colors h-20 flex items-center font-label-sm text-label-sm uppercase hover:bg-surface-container-low dark:hover:bg-primary-container px-4" href="#">
+                    Процес
+                </a>
+<a class="text-on-surface-variant dark:text-tertiary-fixed-dim hover:text-primary transition-colors h-20 flex items-center font-label-sm text-label-sm uppercase hover:bg-surface-container-low dark:hover:bg-primary-container px-4" href="#">
+                    Контакти
+                </a>
+</div>
+<button class="hidden md:inline-flex bg-secondary text-on-secondary px-6 py-3 rounded-DEFAULT font-label-sm text-label-sm uppercase tracking-wider hover:bg-secondary-container transition-colors active:opacity-80">
+                Замовити розрахунок
+            </button>
+<!-- Mobile Menu Button (simplified for layout) -->
+<button class="md:hidden p-2 text-on-surface-variant">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24">
+<!-- Header Section -->
+<header class="mb-16 md:mb-24">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-xl md:text-headline-xl text-primary mb-8 border-b border-outline-variant pb-4 w-fit">
+                Наші послуги
+            </h1>
+<div class="w-full aspect-video md:aspect-[21/9] bg-surface-container-low border border-outline-variant rounded-DEFAULT overflow-hidden mb-12">
+<img alt="Featured service image" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1V7UZNnZKOuQ7--kXXY-QH9Dqts_Df4KBBeJU6hTkSGgo5yK6FGgmdB9EirKyS8np0g94PQSdVI4fPaSqllXpB2HwyBgaXFjsFg8Dv1zgVqU7DFVICsISJBAe5sGlhQBkSnSVxY2k41sP-WvPjZJ4A4Vvq9-fUveydbRS5yDhGP85OomLmjGFBGE6kfA0qH22j3UROR3bNg4zrLuIcLjmnZbvW_CqfSlugvx0CkOkc6M2R0c9oE369CkWwY"/>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+                ПП ОЛМЕК надає комплексні послуги з ремонту, модернізації та технічного обслуговування промислового обладнання. Ми гарантуємо інженерну точність та дотримання високих стандартів якості.
+            </p>
+</header>
+<!-- Services Grid (Bento style) -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-24">
+<!-- Service 1: Large -->
+<div class="md:col-span-8 bg-surface border border-outline-variant rounded-DEFAULT p-8 hover:bg-surface-container-low transition-colors group cursor-pointer relative overflow-hidden flex flex-col justify-between min-h-[320px]">
+<div class="absolute top-8 right-8 text-outline group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 0;">manufacturing</span>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4 pb-4 border-b border-outline-variant w-fit">Запірна арматура</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+                        Капітальний ремонт, випробування та відновлення герметичності засувок, клапанів та кранів високого тиску.
+                    </p>
+</div>
+<div class="mt-8 flex gap-4">
+<span class="px-3 py-1 bg-surface-container-highest border border-outline-variant rounded text-on-surface font-mono-label text-mono-label text-xs">DN 15-1200</span>
+<span class="px-3 py-1 bg-surface-container-highest border border-outline-variant rounded text-on-surface font-mono-label text-mono-label text-xs">PN до 400</span>
+</div>
+</div>
+<!-- Service 2: Standard -->
+<div class="md:col-span-4 bg-surface border border-outline-variant rounded-DEFAULT p-8 hover:bg-surface-container-low transition-colors group cursor-pointer relative flex flex-col justify-between min-h-[320px]">
+<div class="absolute top-8 right-8 text-outline group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 0;">water_pump</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-4 pb-4 border-b border-outline-variant">Насосне обладнання</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Відновлення робочих характеристик відцентрових та поршневих насосів.
+                    </p>
+</div>
+</div>
+<!-- Service 3: Standard Wide -->
+<div class="md:col-span-12 bg-surface border border-outline-variant rounded-DEFAULT p-8 hover:bg-surface-container-low transition-colors group cursor-pointer relative flex flex-col md:flex-row justify-between items-start md:items-center">
+<div class="mb-6 md:mb-0">
+<h2 class="font-headline-md text-headline-md text-primary mb-4 pb-4 border-b border-outline-variant w-fit">Бурове обладнання</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+                        Технічне обслуговування та ремонт елементів бурових установок, превенторів та маніфольдів.
+                    </p>
+</div>
+<div class="text-outline group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 0;">precision_manufacturing</span>
+</div>
+</div>
+</section>
+<!-- Technical Standards Table -->
+<section class="mb-16">
+<h3 class="font-headline-md text-headline-md text-primary mb-8 pb-2 border-b border-outline-variant w-fit">
+                Технічні стандарти
+            </h3>
+<div class="border border-outline-variant rounded-DEFAULT overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead class="bg-surface-container-lowest border-b border-outline-variant font-label-sm text-label-sm text-on-surface uppercase tracking-wider">
+<tr>
+<th class="p-4 border-r border-outline-variant">Параметр</th>
+<th class="p-4">Значення / Стандарт</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface-variant">
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
+<td class="p-4 border-r border-outline-variant">Клас герметичності</td>
+<td class="p-4 font-bold text-primary">Клас А (ГОСТ 9544-2015)</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
+<td class="p-4 border-r border-outline-variant">Робоче середовище</td>
+<td class="p-4 font-bold text-primary">Нафта, газ, вода, агресивні середовища</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-4 border-r border-outline-variant">Гарантійний термін</td>
+<td class="p-4 font-bold text-primary">від 12 до 24 місяців</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mt-24 border border-outline-variant rounded-DEFAULT p-12 text-center bg-surface-container-lowest">
+<h4 class="font-headline-lg text-headline-lg text-primary mb-6">Потребуєте технічної консультації?</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-xl mx-auto">
+                Наші інженери готові надати детальний розрахунок вартості ремонту вашого обладнання.
+            </p>
+<button class="bg-secondary text-on-secondary px-8 py-4 rounded-DEFAULT font-label-sm text-label-sm uppercase tracking-wider hover:bg-secondary-container transition-colors active:opacity-80">
+                Замовити ремонт
+            </button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface dark:bg-on-background w-full border-t border-outline-variant dark:border-outline mt-auto">
+<div class="max-w-container-max mx-auto px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-start gap-8">
+<div>
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-surface-bright mb-4">
+                    ПП ОЛМЕК
+                </div>
+<div class="font-body-md text-body-md text-on-surface-variant">
+                    © 2024 ПП ОЛМЕК. Всі права захищені.
+                </div>
+</div>
+<div class="flex flex-col md:flex-row gap-6 font-body-md text-body-md">
+<a class="text-on-surface-variant dark:text-tertiary-fixed-dim hover:text-secondary transition-colors transition-all duration-200 ease-in-out hover:underline decoration-secondary decoration-2" href="#">
+                    Контакти
+                </a>
+<a class="text-on-surface-variant dark:text-tertiary-fixed-dim hover:text-secondary transition-colors transition-all duration-200 ease-in-out hover:underline decoration-secondary decoration-2" href="#">
+                    Політика конфіденційності
+                </a>
+<a class="text-on-surface-variant dark:text-tertiary-fixed-dim hover:text-secondary transition-colors transition-all duration-200 ease-in-out hover:underline decoration-secondary decoration-2" href="#">
+                    Умови використання
+                </a>
+<a class="text-on-surface-variant dark:text-tertiary-fixed-dim hover:text-secondary transition-colors transition-all duration-200 ease-in-out hover:underline decoration-secondary decoration-2" href="#">
+                    Карта сайту
+                </a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="uk"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Процес ремонту - ПП ОЛМЕК</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#213145",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "surface-container-high": "#dce9ff",
+                        "on-surface-variant": "#45464d",
+                        "on-secondary-container": "#fffbff",
+                        "outline": "#76777d",
+                        "surface-dim": "#cbdbf5",
+                        "secondary": "#ba0035",
+                        "on-background": "#0b1c30",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#d3e4fe",
+                        "surface-container-low": "#eff4ff",
+                        "secondary-fixed-dim": "#ffb3b6",
+                        "primary-container": "#131b2e",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-secondary-fixed": "#40000c",
+                        "on-secondary-fixed-variant": "#920028",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-surface": "#0b1c30",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "surface": "#f8f9ff",
+                        "tertiary": "#000000",
+                        "background": "#f8f9ff",
+                        "surface-bright": "#f8f9ff",
+                        "surface-tint": "#565e74",
+                        "on-primary-fixed": "#131b2e",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c6c6cd",
+                        "on-tertiary-container": "#818486",
+                        "surface-container": "#e5eeff",
+                        "on-primary-container": "#7c839b",
+                        "inverse-on-surface": "#eaf1ff",
+                        "inverse-primary": "#bec6e0",
+                        "secondary-container": "#e21e49",
+                        "on-tertiary-fixed": "#191c1e",
+                        "primary-fixed": "#dae2fd",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#e0e3e5",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "primary": "#000000",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#191c1e",
+                        "secondary-fixed": "#ffdada"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "mono-label": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "mono-label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky z-50 bg-surface border-b border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between h-20">
+<div class="font-headline-md text-headline-md font-bold tracking-tighter text-primary">
+                ПП ОЛМЕК
+            </div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low px-4 py-2 rounded-DEFAULT active:opacity-80 transition-opacity duration-150" href="#">Послуги</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low px-4 py-2 rounded-DEFAULT active:opacity-80 transition-opacity duration-150" href="#">Портфоліо</a>
+<a class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary px-4 py-2 rounded-DEFAULT active:opacity-80 transition-opacity duration-150" href="#">Процес</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low px-4 py-2 rounded-DEFAULT active:opacity-80 transition-opacity duration-150" href="#">Контакти</a>
+</nav>
+<button class="hidden md:block bg-secondary text-on-secondary font-label-sm text-label-sm px-6 py-3 rounded-DEFAULT hover:opacity-90 transition-opacity">
+                Замовити розрахунок
+            </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-24 pb-16">
+<h1 class="font-headline-xl text-headline-xl text-primary mb-6">Процес ремонту</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+                Наш підхід до відновлення промислової арматури базується на суворих інженерних стандартах. Кожен етап контролюється для забезпечення максимальної надійності та довговічності.
+            </p>
+</section>
+<!-- Process Steps (Bento-ish asymmetric layout) -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-24">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Step 1 & 2 Column -->
+<div class="md:col-span-5 flex flex-col gap-gutter">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT p-8 relative overflow-hidden group">
+<div class="absolute top-4 right-4 font-headline-xl text-headline-xl text-surface-container-highest opacity-50 group-hover:text-secondary-fixed transition-colors duration-300">01</div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4 flex items-center gap-3">
+<span class="text-secondary font-bold">1.</span> Діагностика
+                        </h3>
+<div class="w-full h-px bg-outline-variant mb-4"></div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Первинний огляд, дефектація та виявлення прихованих пошкоджень за допомогою методів неруйнівного контролю.
+                        </p>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT p-8 relative overflow-hidden group">
+<div class="absolute top-4 right-4 font-headline-xl text-headline-xl text-surface-container-highest opacity-50 group-hover:text-secondary-fixed transition-colors duration-300">02</div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4 flex items-center gap-3">
+<span class="text-secondary font-bold">2.</span> Розбирання
+                        </h3>
+<div class="w-full h-px bg-outline-variant mb-4"></div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Обережний демонтаж вузлів та деталей із збереженням їхньої цілісності для подальшого аналізу.
+                        </p>
+</div>
+</div>
+<!-- Step 3 & Image Column -->
+<div class="md:col-span-7 flex flex-col gap-gutter">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT p-8 relative overflow-hidden group h-full flex flex-col justify-center">
+<div class="absolute top-4 right-4 font-headline-xl text-headline-xl text-surface-container-highest opacity-50 group-hover:text-secondary-fixed transition-colors duration-300">03</div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4 flex items-center gap-3">
+<span class="text-secondary font-bold">3.</span> Очищення
+                        </h3>
+<div class="w-full h-px bg-outline-variant mb-4"></div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Видалення іржі, накипу, мастил та інших забруднень за допомогою піскоструминної, ультразвукової або хімічної обробки. Підготовка поверхонь до відновлення.
+                        </p>
+</div>
+</div>
+<!-- Step 4 & 5 Column -->
+<div class="md:col-span-12 grid grid-cols-1 md:grid-cols-2 gap-gutter mt-gutter">
+<!-- Step 4 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT p-8 relative overflow-hidden group">
+<div class="absolute top-4 right-4 font-headline-xl text-headline-xl text-surface-container-highest opacity-50 group-hover:text-secondary-fixed transition-colors duration-300">04</div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4 flex items-center gap-3">
+<span class="text-secondary font-bold">4.</span> Механічна обробка
+                        </h3>
+<div class="w-full h-px bg-outline-variant mb-4"></div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Токарні, фрезерні роботи, наплавлення та шліфування зношених поверхонь для відновлення первісної геометрії деталей.
+                        </p>
+</div>
+<!-- Step 5 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT p-8 relative overflow-hidden group bg-surface-container-low border-primary-fixed-dim">
+<div class="absolute top-4 right-4 font-headline-xl text-headline-xl text-surface-container-highest opacity-50 group-hover:text-secondary-fixed transition-colors duration-300">05</div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4 flex items-center gap-3">
+<span class="text-secondary font-bold">5.</span> Збірка та тестування
+                        </h3>
+<div class="w-full h-px bg-outline-variant mb-4"></div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Монтаж відновлених вузлів. Гідравлічні та пневматичні випробування на герметичність та міцність під робочим та випробувальним тиском.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Standards Table -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-24">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8 border-b border-outline-variant pb-4">Стандарти допусків</h2>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b-2 border-primary">
+<th class="font-label-sm text-label-sm text-on-surface-variant py-4 pr-4 uppercase tracking-wider">Параметр</th>
+<th class="font-label-sm text-label-sm text-on-surface-variant py-4 px-4 uppercase tracking-wider">Клас точності</th>
+<th class="font-label-sm text-label-sm text-on-surface-variant py-4 pl-4 uppercase tracking-wider text-right">Допустиме відхилення</th>
+</tr>
+</thead>
+<tbody class="font-mono-label text-mono-label text-primary">
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
+<td class="py-4 pr-4">Герметичність затвору</td>
+<td class="py-4 px-4">Клас А (ГОСТ 9544)</td>
+<td class="py-4 pl-4 text-right">Без видимих протікань</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
+<td class="py-4 pr-4">Шорсткість ущільнювальних поверхонь</td>
+<td class="py-4 px-4">Ra 0.4 - 0.8 мкм</td>
+<td class="py-4 pl-4 text-right">± 0.1 мкм</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
+<td class="py-4 pr-4">Співвісність шпинделя</td>
+<td class="py-4 px-4">H7/g6</td>
+<td class="py-4 pl-4 text-right">0.05 мм</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
+<td class="py-4 pr-4">Товщина наплавлення</td>
+<td class="py-4 px-4">Stellite 6</td>
+<td class="py-4 pl-4 text-right">+ 0.5 мм</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface border-t border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-start">
+<div class="mb-8 md:mb-0">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-2">
+                    ПП ОЛМЕК
+                </div>
+<div class="font-body-md text-body-md text-on-surface-variant mt-4">
+                    © 2024 ПП ОЛМЕК. Всі права захищені.
+                </div>
+</div>
+<nav class="flex flex-col md:flex-row gap-4 md:gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all duration-200 ease-in-out hover:underline decoration-secondary decoration-2" href="#">Контакти</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all duration-200 ease-in-out hover:underline decoration-secondary decoration-2" href="#">Політика конфіденційності</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all duration-200 ease-in-out hover:underline decoration-secondary decoration-2" href="#">Умови використання</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all duration-200 ease-in-out hover:underline decoration-secondary decoration-2" href="#">Карта сайту</a>
+</nav>
+</div>
+</footer>
+</body></html>
