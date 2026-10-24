@@ -3,17 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ПП ОЛМЕК | Послуги</title>
+    <title>ПП ОЛМЕК | Портфоліо</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Material+Symbols+Outlined:wght@400;GRAD@0;opsz@24&display=swap" rel="stylesheet" />
     <style>
-      body { font-family: 'Inter', sans-serif; background: #f8f9ff; color: #0b1c30; }
+      :root { --bg: #f8f9ff; }
+      body { font-family: 'Inter', sans-serif; background: var(--bg); color: #0b1c30; }
       .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
       .active-link { color: #ba0035 !important; border-bottom: 2px solid #ba0035; }
       .reveal { opacity: 0; transform: translateY(24px); transition: all .7s ease; }
       .reveal.visible { opacity: 1; transform: translateY(0); }
+      .card-shadow { box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08); }
+      .animate-pulse-slow { animation: pulseSlow 2.8s ease-in-out infinite; }
+      @keyframes pulseSlow { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.18); opacity: .75; } }
     </style>
   </head>
   <body class="min-h-screen antialiased">
@@ -52,72 +56,145 @@
       </div>
     </header>
 
-    <main class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-      <section class="reveal mb-12">
-        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-red-600">Послуги</p>
-        <h1 class="mt-3 text-4xl font-black tracking-tight text-slate-900 sm:text-5xl">Наші послуги</h1>
-        <p class="mt-4 max-w-3xl text-lg text-slate-600">Комплексний ремонт, модернізація та технічне обслуговування запірної арматури, насосного та бурового обладнання.</p>
-      </section>
+    <main>
+      <section class="relative overflow-hidden bg-slate-900 text-white">
+        <div class="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1600&q=80" alt="Промислове обладнання" class="h-full w-full object-cover opacity-35" />
+          <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-slate-900/30"></div>
+        </div>
 
-      <section class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        <article class="reveal rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:border-red-200">
-          <span class="material-symbols-outlined text-5xl text-red-600">plumbing</span>
-          <h2 class="mt-6 text-2xl font-bold text-slate-900">Запірна арматура</h2>
-          <p class="mt-3 text-slate-600">Капітальний ремонт, випробування і відновлення герметичності засувок, клапанів та кранів.</p>
-          <div class="mt-6 flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.1em] text-slate-600">
-            <span class="rounded-full bg-slate-100 px-2 py-1">DN 15–1200</span>
-            <span class="rounded-full bg-slate-100 px-2 py-1">PN до 400</span>
+        <div class="relative mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:px-8 lg:py-28">
+          <div class="reveal">
+            <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-slate-200">
+              <span class="h-2 w-2 rounded-full bg-red-500 animate-pulse-slow"></span>
+              Промисловий сервіс
+            </div>
+            <h1 class="max-w-xl text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl">Капітальний ремонт запірної арматури</h1>
+            <p class="mt-6 max-w-xl text-lg text-slate-200">Повертаємо надійність, герметичність і робочий ресурс обладнання для нафтогазової, енергетичної та виробничої сфер.</p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="contacts.html" class="rounded-full bg-red-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-red-700">Замовити ремонт</a>
+              <a href="services.html" class="rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10">Детальніше</a>
+            </div>
           </div>
-        </article>
 
-        <article class="reveal rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:border-red-200">
-          <span class="material-symbols-outlined text-5xl text-red-600">water_pump</span>
-          <h2 class="mt-6 text-2xl font-bold text-slate-900">Насосне обладнання</h2>
-          <p class="mt-3 text-slate-600">Відновлення робочих характеристик відцентрових, поршневих та спеціалізованих насосів.</p>
-        </article>
-
-        <article class="reveal rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:border-red-200 md:col-span-2 xl:col-span-1">
-          <span class="material-symbols-outlined text-5xl text-red-600">precision_manufacturing</span>
-          <h2 class="mt-6 text-2xl font-bold text-slate-900">Бурове обладнання</h2>
-          <p class="mt-3 text-slate-600">Технічне обслуговування та ремонт елементів бурових установок, превенторів і маніфольдів.</p>
-        </article>
-      </section>
-
-      <section class="reveal mt-16 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
-        <h2 class="text-3xl font-black text-slate-900">Технічні стандарти</h2>
-        <div class="mt-8 overflow-hidden rounded-2xl border border-slate-200">
-          <table class="w-full text-left">
-            <thead class="bg-slate-50 text-sm uppercase tracking-[0.12em] text-slate-600">
-              <tr>
-                <th class="p-4">Параметр</th>
-                <th class="p-4">Значення / Стандарт</th>
-              </tr>
-            </thead>
-            <tbody class="text-slate-700">
-              <tr class="border-t border-slate-200">
-                <td class="p-4">Клас герметичності</td>
-                <td class="p-4 font-semibold text-slate-900">Клас А (ГОСТ 9544-2015)</td>
-              </tr>
-              <tr class="border-t border-slate-200">
-                <td class="p-4">Робоче середовище</td>
-                <td class="p-4 font-semibold text-slate-900">Нафта, газ, вода, агресивні середовища</td>
-              </tr>
-              <tr class="border-t border-slate-200">
-                <td class="p-4">Гарантійний термін</td>
-                <td class="p-4 font-semibold text-slate-900">12–24 місяці</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="reveal grid gap-4 self-end lg:justify-self-end">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md card-shadow">
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <p class="text-xs uppercase tracking-[0.2em] text-slate-300">Реальний термін</p>
+                  <p class="mt-2 text-3xl font-black">7–14 днів</p>
+                </div>
+                <span class="material-symbols-outlined text-5xl text-red-400">schedule</span>
+              </div>
+            </div>
+            <div class="grid gap-4 sm:grid-cols-3">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md card-shadow">
+                <p class="text-slate-300">Гарантія</p>
+                <p class="mt-2 text-2xl font-black">12–24 міс.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md card-shadow">
+                <p class="text-slate-300">Клієнтів</p>
+                <p class="mt-2 text-2xl font-black">200+</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md card-shadow">
+                <p class="text-slate-300">Обладнання</p>
+                <p class="mt-2 text-2xl font-black">DN 15–1200</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="reveal mt-16 rounded-3xl bg-slate-900 p-8 text-white shadow-xl">
-        <div class="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
-          <div>
-            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-red-300">Зробимо розрахунок</p>
-            <h2 class="mt-3 text-3xl font-black">Потрібна технічна консультація?</h2>
+      <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div class="mb-10 reveal">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-red-600">Наші послуги</p>
+          <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">Виконуємо складні ремонти під ключ</h2>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="reveal rounded-3xl border border-slate-200 bg-white p-8 card-shadow transition hover:-translate-y-1 hover:border-red-200">
+            <span class="material-symbols-outlined text-4xl text-red-600">plumbing</span>
+            <h3 class="mt-6 text-2xl font-bold text-slate-900">Ремонт засувок</h3>
+            <p class="mt-3 text-slate-600">Відновлення герметичності, геометрії клина, притирка поверхонь і повний цикл випробувань.</p>
+            <a href="services.html" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-slate-900">Детальніше <span class="material-symbols-outlined text-base">arrow_forward</span></a>
+          </article>
+
+          <article class="reveal rounded-3xl border border-slate-200 bg-white p-8 card-shadow transition hover:-translate-y-1 hover:border-red-200">
+            <span class="material-symbols-outlined text-4xl text-red-600">valve</span>
+            <h3 class="mt-6 text-2xl font-bold text-slate-900">Ремонт вентилів</h3>
+            <p class="mt-3 text-slate-600">Спеціалізоване відновлення різних типів клапанів, підвищення ресурсу і стійкості до тиску.</p>
+            <a href="services.html" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-slate-900">Детальніше <span class="material-symbols-outlined text-base">arrow_forward</span></a>
+          </article>
+
+          <article class="reveal rounded-3xl border border-slate-200 bg-white p-8 card-shadow transition hover:-translate-y-1 hover:border-red-200">
+            <span class="material-symbols-outlined text-4xl text-red-600">precision_manufacturing</span>
+            <h3 class="mt-6 text-2xl font-bold text-slate-900">Токарно-фрезерні роботи</h3>
+            <p class="mt-3 text-slate-600">Виготовлення деталей за кресленнями або їх відновлення з точністю до технічних допусків.</p>
+            <a href="services.html" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-slate-900">Детальніше <span class="material-symbols-outlined text-base">arrow_forward</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="bg-slate-100 py-20" id="portfolio">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-10 reveal flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.2em] text-red-600">Реальні роботи</p>
+              <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">Приклади виконаних проектів</h2>
+            </div>
+            <a href="services.html" class="font-semibold text-slate-900 underline decoration-red-500 underline-offset-8">Всі послуги</a>
           </div>
-          <a href="contacts.html" class="rounded-full bg-red-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-red-700">Замовити ремонт</a>
+
+          <div class="grid gap-6 lg:grid-cols-12">
+            <article class="reveal overflow-hidden rounded-3xl border border-slate-200 bg-white lg:col-span-8">
+              <div class="h-80 bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1565610222536-ef125c59da2b?auto=format&fit=crop&w=1200&q=80')"></div>
+              <div class="p-7">
+                <div class="mb-3 flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-slate-600">
+                  <span class="rounded-full bg-slate-100 px-2 py-1">Засувка клинова</span>
+                  <span class="rounded-full bg-slate-100 px-2 py-1">Ду 500</span>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-900">Капітальний ремонт засувки високого тиску</h3>
+                <p class="mt-4 text-slate-600">Повне відновлення ущільнювальних поверхонь, розбирання, наплавлення, шліфування та перевірка герметичності на випробувальному стенді.</p>
+              </div>
+            </article>
+
+            <article class="reveal overflow-hidden rounded-3xl border border-slate-200 bg-white lg:col-span-4">
+              <div class="h-80 bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=900&q=80')"></div>
+              <div class="p-6">
+                <span class="rounded-full bg-red-50 px-2 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-red-700">В ремонті</span>
+                <h3 class="mt-4 text-2xl font-bold text-slate-900">Відновлення шпинделів</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div class="grid gap-6 lg:grid-cols-2">
+          <div class="reveal rounded-3xl border border-slate-200 bg-white p-8 card-shadow">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-red-600">Наш підхід</p>
+            <h2 class="mt-3 text-3xl font-black text-slate-900">Працюємо прозоро, швидко і по стандарту</h2>
+            <ul class="mt-8 space-y-5 text-slate-700">
+              <li class="flex gap-4"><span class="material-symbols-outlined text-red-600">check_circle</span><span>Діагностика, дефектація та рекомендації до ремонту.</span></li>
+              <li class="flex gap-4"><span class="material-symbols-outlined text-red-600">check_circle</span><span>Розрахунок вартості з поясненням термінів і етапів.</span></li>
+              <li class="flex gap-4"><span class="material-symbols-outlined text-red-600">check_circle</span><span>Дотримання технічних допусків і випробування перед поверненням.</span></li>
+            </ul>
+          </div>
+
+          <div class="reveal rounded-3xl bg-slate-900 p-8 text-white card-shadow">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-red-300">Наступний крок</p>
+            <h2 class="mt-3 text-3xl font-black">Далі — детальна консультація і маршрут до нас</h2>
+            <div class="mt-8 space-y-4">
+              <a href="process.html" class="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:bg-white/10">
+                <span>Познайомитися з процесом</span>
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </a>
+              <a href="contacts.html#map-section" class="flex items-center justify-between rounded-2xl border border-red-500/50 bg-red-600/10 p-4 transition hover:bg-red-600/20">
+                <span>Показати місцезнаходження</span>
+                <span class="material-symbols-outlined">location_on</span>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -165,3 +242,4 @@
     </script>
   </body>
 </html>
+
