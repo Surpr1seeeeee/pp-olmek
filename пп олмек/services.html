@@ -9,15 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Material+Symbols+Outlined:wght@400;GRAD@0;opsz@24&display=swap" rel="stylesheet" />
     <style>
-      :root { --bg: #f8f9ff; }
-      body { font-family: 'Inter', sans-serif; background: var(--bg); color: #0b1c30; }
+      body { font-family: 'Inter', sans-serif; background: #f8f9ff; color: #0b1c30; }
       .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
       .active-link { color: #ba0035 !important; border-bottom: 2px solid #ba0035; }
       .reveal { opacity: 0; transform: translateY(24px); transition: all .7s ease; }
       .reveal.visible { opacity: 1; transform: translateY(0); }
-      .card-shadow { box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08); }
-      .animate-pulse-slow { animation: pulseSlow 2.8s ease-in-out infinite; }
-      @keyframes pulseSlow { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.18); opacity: .75; } }
     </style>
   </head>
   <body class="min-h-screen antialiased">
@@ -36,7 +32,6 @@
         </nav>
 
         <div class="hidden items-center gap-3 md:flex">
-          <a href="contacts.html#map-section" class="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-red-500 hover:text-red-600">На карту</a>
           <a href="contacts.html" class="rounded-full bg-red-600 px-5 py-2.5 text-sm font-semibold text-white shadow hover:bg-red-700">Замовити розрахунок</a>
         </div>
 
@@ -51,7 +46,6 @@
           <a href="services.html" class="rounded px-3 py-2 hover:bg-slate-50">Послуги</a>
           <a href="process.html" class="rounded px-3 py-2 hover:bg-slate-50">Процес</a>
           <a href="contacts.html" class="rounded px-3 py-2 hover:bg-slate-50">Контакти</a>
-          <a href="contacts.html#map-section" class="rounded bg-red-600 px-3 py-2 text-white">На карту</a>
         </div>
       </div>
     </header>
@@ -66,7 +60,7 @@
         <div class="relative mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:px-8 lg:py-28">
           <div class="reveal">
             <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-slate-200">
-              <span class="h-2 w-2 rounded-full bg-red-500 animate-pulse-slow"></span>
+              <span class="h-2 w-2 rounded-full bg-red-500 animate-pulse"></span>
               Промисловий сервіс
             </div>
             <h1 class="max-w-xl text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl">Капітальний ремонт запірної арматури</h1>
@@ -78,7 +72,7 @@
           </div>
 
           <div class="reveal grid gap-4 self-end lg:justify-self-end">
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md card-shadow">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md shadow-2xl">
               <div class="flex items-center justify-between gap-4">
                 <div>
                   <p class="text-xs uppercase tracking-[0.2em] text-slate-300">Реальний термін</p>
@@ -88,15 +82,15 @@
               </div>
             </div>
             <div class="grid gap-4 sm:grid-cols-3">
-              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md card-shadow">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md shadow-xl">
                 <p class="text-slate-300">Гарантія</p>
                 <p class="mt-2 text-2xl font-black">12–24 міс.</p>
               </div>
-              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md card-shadow">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md shadow-xl">
                 <p class="text-slate-300">Клієнтів</p>
                 <p class="mt-2 text-2xl font-black">200+</p>
               </div>
-              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md card-shadow">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md shadow-xl">
                 <p class="text-slate-300">Обладнання</p>
                 <p class="mt-2 text-2xl font-black">DN 15–1200</p>
               </div>
@@ -112,21 +106,21 @@
         </div>
 
         <div class="grid gap-6 md:grid-cols-3">
-          <article class="reveal rounded-3xl border border-slate-200 bg-white p-8 card-shadow transition hover:-translate-y-1 hover:border-red-200">
+          <article class="reveal rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:border-red-200">
             <span class="material-symbols-outlined text-4xl text-red-600">plumbing</span>
             <h3 class="mt-6 text-2xl font-bold text-slate-900">Ремонт засувок</h3>
             <p class="mt-3 text-slate-600">Відновлення герметичності, геометрії клина, притирка поверхонь і повний цикл випробувань.</p>
             <a href="services.html" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-slate-900">Детальніше <span class="material-symbols-outlined text-base">arrow_forward</span></a>
           </article>
 
-          <article class="reveal rounded-3xl border border-slate-200 bg-white p-8 card-shadow transition hover:-translate-y-1 hover:border-red-200">
+          <article class="reveal rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:border-red-200">
             <span class="material-symbols-outlined text-4xl text-red-600">valve</span>
             <h3 class="mt-6 text-2xl font-bold text-slate-900">Ремонт вентилів</h3>
             <p class="mt-3 text-slate-600">Спеціалізоване відновлення різних типів клапанів, підвищення ресурсу і стійкості до тиску.</p>
             <a href="services.html" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-slate-900">Детальніше <span class="material-symbols-outlined text-base">arrow_forward</span></a>
           </article>
 
-          <article class="reveal rounded-3xl border border-slate-200 bg-white p-8 card-shadow transition hover:-translate-y-1 hover:border-red-200">
+          <article class="reveal rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:border-red-200">
             <span class="material-symbols-outlined text-4xl text-red-600">precision_manufacturing</span>
             <h3 class="mt-6 text-2xl font-bold text-slate-900">Токарно-фрезерні роботи</h3>
             <p class="mt-3 text-slate-600">Виготовлення деталей за кресленнями або їх відновлення з точністю до технічних допусків.</p>
@@ -135,7 +129,7 @@
         </div>
       </section>
 
-      <section class="bg-slate-100 py-20" id="portfolio">
+      <section class="bg-slate-100 py-20">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div class="mb-10 reveal flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
@@ -171,7 +165,7 @@
 
       <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div class="grid gap-6 lg:grid-cols-2">
-          <div class="reveal rounded-3xl border border-slate-200 bg-white p-8 card-shadow">
+          <div class="reveal rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
             <p class="text-xs font-semibold uppercase tracking-[0.2em] text-red-600">Наш підхід</p>
             <h2 class="mt-3 text-3xl font-black text-slate-900">Працюємо прозоро, швидко і по стандарту</h2>
             <ul class="mt-8 space-y-5 text-slate-700">
@@ -181,16 +175,16 @@
             </ul>
           </div>
 
-          <div class="reveal rounded-3xl bg-slate-900 p-8 text-white card-shadow">
+          <div class="reveal rounded-3xl bg-slate-900 p-8 text-white shadow-xl">
             <p class="text-xs font-semibold uppercase tracking-[0.2em] text-red-300">Наступний крок</p>
-            <h2 class="mt-3 text-3xl font-black">Далі — детальна консультація і маршрут до нас</h2>
+            <h2 class="mt-3 text-3xl font-black">Далі — детальна консультація і режим роботи</h2>
             <div class="mt-8 space-y-4">
               <a href="process.html" class="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:bg-white/10">
                 <span>Познайомитися з процесом</span>
                 <span class="material-symbols-outlined">arrow_forward</span>
               </a>
-              <a href="contacts.html#map-section" class="flex items-center justify-between rounded-2xl border border-red-500/50 bg-red-600/10 p-4 transition hover:bg-red-600/20">
-                <span>Показати місцезнаходження</span>
+              <a href="contacts.html" class="flex items-center justify-between rounded-2xl border border-red-500/50 bg-red-600/10 p-4 transition hover:bg-red-600/20">
+                <span>Перейти до контактів</span>
                 <span class="material-symbols-outlined">location_on</span>
               </a>
             </div>
@@ -210,7 +204,6 @@
           <a href="contacts.html" class="hover:text-red-600">Контакти</a>
           <a href="services.html" class="hover:text-red-600">Послуги</a>
           <a href="process.html" class="hover:text-red-600">Процес</a>
-          <a href="contacts.html#map-section" class="hover:text-red-600">Карта</a>
         </nav>
       </div>
     </footer>
@@ -242,4 +235,3 @@
     </script>
   </body>
 </html>
-
