@@ -16,6 +16,26 @@
       .active { color: #d91e4b; border-bottom: 2px solid #d91e4b; }
       .reveal { opacity: 0; transform: translateY(22px); transition: all .7s ease; }
       .reveal.visible { opacity: 1; transform: translateY(0); }
+      .nav-link {
+  transition: all .2s ease;
+  color: #475569;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-link:hover {
+  color: #d91e4b;
+}
+
+.nav-link:active,
+.nav-link:focus {
+  color: #475569;
+  border-bottom: none;
+}
+
+.active {
+  color: #d91e4b;
+  border-bottom: 2px solid #d91e4b;
+}
     </style>
   </head>
   <body class="antialiased">
@@ -169,5 +189,16 @@
 
       document.querySelectorAll('.reveal').forEach((item) => observer.observe(item));
     </script>
+    <script>
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+  document.querySelectorAll('.nav-link').forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href) return;
+
+    const isActive = href === currentPage;
+    link.classList.toggle('active', isActive);
+  });
+</script>
   </body>
 </html>
