@@ -17,15 +17,38 @@
       .reveal { opacity: 0; transform: translateY(22px); transition: all .7s ease; }
       .reveal.visible { opacity: 1; transform: translateY(0); }
 
-      @keyframes logoBlink {
-        0%, 46%, 100% { opacity: 1; transform: scale(1); }
-        48%, 54% { opacity: 0.12; transform: scale(0.9); }
-        56%, 100% { opacity: 1; transform: scale(1); }
+      @keyframes logoPulse {
+        0%, 100% {
+          opacity: 1;
+          transform: scale(1);
+          filter: drop-shadow(0 0 0 rgba(239, 68, 68, 0));
+        }
+        20% {
+          opacity: 0.9;
+          transform: scale(1.04);
+          filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.18));
+        }
+        35% {
+          opacity: 0.7;
+          transform: scale(1.12);
+          filter: drop-shadow(0 0 12px rgba(239, 68, 68, 0.3));
+        }
+        48% {
+          opacity: 0.92;
+          transform: scale(1.02);
+          filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.18));
+        }
+        65% {
+          opacity: 1;
+          transform: scale(1);
+          filter: drop-shadow(0 0 0 rgba(239, 68, 68, 0));
+        }
       }
 
       .brand-icon {
-        animation: logoBlink 1s steps(1, end) infinite;
-        filter: drop-shadow(0 0 6px rgba(239, 68, 68, 0.25));
+        animation: logoPulse 2.8s ease-in-out infinite;
+        transform-origin: center;
+        transition: transform 0.25s ease;
       }
 
       .nav-link {
@@ -81,7 +104,7 @@
         padding: 1rem;
         opacity: 0;
         pointer-events: none;
-        transition: opacity 0.2s ease;
+        transition: opacity 0.25s ease;
       }
 
       .detail-modal.is-open {
@@ -95,12 +118,12 @@
         border-radius: 1.5rem;
         box-shadow: 0 24px 80px rgba(15, 23, 42, 0.25);
         padding: 1.5rem;
-        transform: translateY(20px);
+        transform: translateY(20px) scale(0.97);
         transition: transform 0.25s ease;
       }
 
       .detail-modal.is-open .detail-panel {
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
       }
 
       .detail-list li {
